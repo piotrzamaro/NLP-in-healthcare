@@ -4,9 +4,24 @@ output:
    rmarkdown::html_document:
     theme: lumen
 ---
- 
+```{r echo =F}
+require(dplyr)
+require(pubmed.mineR)
+require(RISmed)
+require(quanteda)
+require(bibliometrix)
+require(ggplot2)
+require(quanteda.textmodels)
+require(tidyverse)  
+```
 
- 
+
+```{query = "cost AND DALY[Title/Abstract]"
+
+q <- pubmedR::pmQueryTotalCount(query)
+D <- pubmedR::pmApiRequest(q = query, api_key = api_key, limit = q$total_count)
+
+``` 
 
 > # COST-EFFECT
 
@@ -41,7 +56,7 @@ n
 
 
 ```{r eval=FALSE}
-n
+u
 ```
 
 
@@ -53,7 +68,7 @@ n
 
 
 #### STRUKTURA KORPUSU
-
+``` 
 
 
 #### STATYSTYKI
