@@ -24,4 +24,6 @@ dataset1 <- metadata %>%
   termExtraction("DE")
 dataset1$AU1_CO<- dataset1$SO_CO
 
+``` {r}
 print(dataset1)
+```
