@@ -16,12 +16,20 @@ require(tidyverse)
 ```
 
 
-```{query = "cost AND DALY[Title/Abstract]"
+```{r echo = F}
+{query = "cost AND DALY[Title/Abstract]"
 
 q <- pubmedR::pmQueryTotalCount(query)
 D <- pubmedR::pmApiRequest(q = query, api_key = api_key, limit = q$total_count)
-
 ``` 
+
+```{r}
+cost <- results <- biblioAnalysis(dataset1)
+sum <- summary(dataset1, pause=F, width=130)
+```
+
+
+
 
 > # COST-EFFECT
 
